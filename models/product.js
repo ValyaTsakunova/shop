@@ -3,7 +3,14 @@ import autopopulate from 'mongoose-autopopulate';
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
-    name: String,
+    name: {
+        type: String,
+        default: "newProduct"
+    },
+    price: {
+        type: Number, 
+        default: 5   
+    }
 },
     { versionKey: false }
 );

@@ -4,7 +4,7 @@ import { createCart, addProductToCart, getCartById } from '../controllers/cartCo
 const cartRouter = express.Router();
 
 cartRouter.post("/create", createCart);
-cartRouter.put("/addProduct", addProductToCart);
+cartRouter.post("/addProduct", addProductToCart);
 cartRouter.get("/:id", getCartById);
 
 export default cartRouter;

@@ -3,7 +3,10 @@ import autopopulate from 'mongoose-autopopulate';
 const { Schema } = mongoose;
 
 const categorySchema = new Schema({
-    name: String,
+    name: {
+        type: String,
+        default: 'newCategory'
+    }
 },
     { versionKey: false }
 );
