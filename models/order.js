@@ -3,7 +3,20 @@ import autopopulate from 'mongoose-autopopulate';
 const { Schema } = mongoose;
 
 const orderSchema = new Schema({
-    name: String,
+    number:{
+        type: Number,
+        default: 111
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user",
+        autopopulate: true 
+    },
+    products:[{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "product",
+        autopopulate: true 
+    }]
 },
     { versionKey: false }
 );

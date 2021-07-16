@@ -10,6 +10,11 @@ const productSchema = new Schema({
     price: {
         type: Number, 
         default: 5   
+    },
+    category: {
+        type: String,
+        default: "newCategory",
+        require: true
     }
 },
     { versionKey: false }

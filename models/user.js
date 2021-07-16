@@ -27,7 +27,12 @@ const userSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "cart",
         autopopulate: true 
-    }
+    },
+    orders: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "order",
+        autopopulate: true 
+    }]
 },
     { versionKey: false });
 

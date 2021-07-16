@@ -3,7 +3,7 @@ import { createOrder, deleteOrder, getAllOrders, getOrderById } from '../control
 
 const orderRouter = express.Router();
 
-orderRouter.post("/create", createOrder);
+orderRouter.post("/create/:id", createOrder);
 orderRouter.delete("/:id", deleteOrder)
 orderRouter.get("/getAllOrders", getAllOrders);
 orderRouter.get("/:id", getOrderById);

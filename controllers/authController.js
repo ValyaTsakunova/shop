@@ -22,7 +22,6 @@ export const registration = async function(request, response){
 
 export const authorization = async function(request, response){
     const user = await User.findOne({ name: request.body.name, password: request.body.password });
-    // console.log(user)
     if (!user) {
         response.send('Name or password incorrect');
         
